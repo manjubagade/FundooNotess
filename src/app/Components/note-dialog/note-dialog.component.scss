@@ -1,0 +1,42 @@
+.dialog
+{
+   min-height: 20px;
+   min-width: 550px;
+   position: relative;
+   outline:none;
+   border: none;
+   overflow: hidden;
+   resize : none;
+}
+.inner
+{
+border-right-width: 50px;
+}
+
+
+.card{
+    min-width: 550px;
+    min-height: 180px;
+
+}
+.takenote{
+    background: transparent;
+      margin-bottom: 10px;
+      color: rgb(173, 166, 166);
+      border: none;
+      outline: none;
+      user-select: none;
+
+    }
+    .textArea{
+      background: transparent;
+      border: none;
+      outline: none;
+      user-select: none;
+      margin-left: 0cm;
+      margin-top: 1cm;
+      font-size: 0.4cm;
+    } 
+    ::ng-deep .mat-dialog-container{
+      padding:0%; 
+  }

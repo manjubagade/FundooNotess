@@ -1,0 +1,48 @@
+<!-- unpin -->
+    <!-- <input type="text" [(ngModel)]="searchText" placeholder="name"> -->
+    <div class="notesDisplay">
+        <div *ngFor="let note of noteCards" cdkDrag>
+          <div >
+            <mat-card  *ngIf = "note.isPin == false" fxLayoutGap="20px" class="cardDisplay" [style.background-color]=note.colorCode>
+              <div (click)="openDialog(note)">
+                  <mat-icon class="pin" (click)='pinnote(note)'>
+                      <img 
+                        src="../../../assets/pinBeforeClick.svg"/>
+                    </mat-icon>
+                <div>
+                  <mat-card-title class="titleinput">{{note.title}}</mat-card-title>
+                </div>
+                <mat-card-content class="noteinput ">{{note.takeANote}}</mat-card-content>
+              </div>
+              <div>
+                <mat-chip>{{note.sendermail}} 
+                  <mat-icon matChipRemove >cancel</mat-icon>
+                </mat-chip> 
+                <div *ngFor = "let shared of notesCollaborator">
+                  <div *ngIf = "shared.noteId == note.noteId">
+                    <mat-chip>{{note.receiverEmail}} 
+                      <mat-icon matChipRemove >cancel</mat-icon>
+                    </mat-chip> 
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div *ngIf="cond=='trash'">
+                  <button mat-icon-button  [matMenuTriggerFor]="trashmenu">
+                      <mat-icon >more_vert</mat-icon>
+                    </button>
+                    <mat-menu #trashmenu="matMenu">
+                        <button mat-menu-item (click)="DeleteForever(note)">Delete forever</button>
+                        <button mat-menu-item (click)="Restore(note)">Restore</button>
+                      </mat-menu>
+                </div>
+                <div *ngIf='cond!="trash"'>
+                  <app-iconlist (update)='updateCome($event)' [card]='note' [type]='type'></app-iconlist>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+    <!-- unpin -->
