@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
       console.log(this.payLoad.UserID);
 
       localStorage.setItem('UserId', this.payLoad.UserID);
+      alert("welcome to dashboard");
       this.router.navigate(['dashboard']);
 
     }, err => {

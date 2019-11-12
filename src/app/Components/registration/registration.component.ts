@@ -35,6 +35,7 @@ firstNameErrorMessage(){
     {
       this.service.postRequest('registration',user).subscribe(data=>{
         console.log(data);
+        alert("Registration Seccessfully")
         this.router.navigate(['login']);
 
         

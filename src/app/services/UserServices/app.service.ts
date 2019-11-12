@@ -9,6 +9,7 @@ export class AppService {
 
   constructor(private http:HttpClient) { }
   link = 'https://localhost:44360/api/user/'
+  
   postRequest(url, user){ 
    return this.http.post(this.link + url,user);
   }

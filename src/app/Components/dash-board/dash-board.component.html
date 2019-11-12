@@ -59,11 +59,11 @@
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
     [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" #snav mode="side" opened class="example-sidenav" style="width:260px" style="border:0px;"> 
     <mat-nav-list>
-    <div>
+    <div class="paddingnote" >
     <a mat-button  routerLink= "." >
-    <i class="material-icons" style="padding-right: 25px">lightbulb_outline</i>Notes </a>
+    <i class="material-icons" style="padding-right: 25px;">lightbulb_outline</i>Notes </a>
     </div>
-     <div>
+     <div class="paddingnote">
     <a mat-button (click)="headName='Reminders'" routerLink="/dashboard/reminder" >
     <i class="material-icons" style="padding-right: 25px">notifications</i>Reminder </a>
     </div>
@@ -79,17 +79,17 @@
         </div>
         </button>
       </div>
-    <div>
+    <div class="paddingnote">
     <a mat-button (click)="openDialog()">
     <i class="material-icons" style="padding-right: 25px"> edit </i>Edit Label </a>
     </div>
     <mat-divider></mat-divider>
-    <div>
+    <div class="paddingnote">
             <a mat-button (click)="headName='Archive'" routerLink="/dashboard/archivenotes">
                     <i class="material-icons" style="padding-right: 25px">archive</i>Archive
             </a>
     </div>
-    <div>
+    <div class="paddingnote">
             <a mat-button (click)="headName='Trash'" routerLink="/dashboard/trash">
                     <i class="material-icons" style="padding-right: 25px"> delete </i> Trash
             </a>

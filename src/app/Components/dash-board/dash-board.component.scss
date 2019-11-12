@@ -36,7 +36,12 @@ width: -webkit-fill-available;
     width: 250px;
   }
 
-  .profile
-  {
+  .profile {
       background-size: cover
+  }
+  .paddingnote {
+      padding-right:30px;
+      padding-bottom: 20px;
+      font-size: large;
+      font-family: Arial, Helvetica, sans-serif;
   }
