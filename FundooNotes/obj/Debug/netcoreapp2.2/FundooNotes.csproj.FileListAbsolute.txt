@@ -1,0 +1,16 @@
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.deps.json
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.runtimeconfig.json
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.runtimeconfig.dev.json
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.dll
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.pdb
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooData.dll
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooData.pdb
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.csprojAssemblyReference.cache
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.RazorAssemblyInfo.cache
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.RazorAssemblyInfo.cs
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.AssemblyInfoInputs.cache
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.AssemblyInfo.cs
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.RazorTargetAssemblyInfo.cache
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.csproj.CopyComplete
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.dll
+E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.pdb
