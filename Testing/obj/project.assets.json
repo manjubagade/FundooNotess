@@ -10885,11 +10885,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\Testing\\Testing.csproj",
+      "projectUniqueName": "E:\\New folder (3)\\FundooNotes-fundooBackend\\Testing\\Testing.csproj",
       "projectName": "Testing",
-      "projectPath": "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\Testing\\Testing.csproj",
+      "projectPath": "E:\\New folder (3)\\FundooNotes-fundooBackend\\Testing\\Testing.csproj",
       "packagesPath": "C:\\Users\\Bridgelabz\\.nuget\\packages\\",
-      "outputPath": "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\Testing\\obj\\",
+      "outputPath": "E:\\New folder (3)\\FundooNotes-fundooBackend\\Testing\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10908,11 +10908,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj": {
-              "projectPath": "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj"
+            "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj": {
+              "projectPath": "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj"
             },
-            "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooNotes\\FundooNotes.csproj": {
-              "projectPath": "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooNotes\\FundooNotes.csproj"
+            "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooNotes\\FundooNotes.csproj": {
+              "projectPath": "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooNotes\\FundooNotes.csproj"
             }
           }
         }

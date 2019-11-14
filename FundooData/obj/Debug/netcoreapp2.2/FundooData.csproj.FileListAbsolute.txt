@@ -10,3 +10,16 @@ E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooData\obj\Debug\netc
 E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.csproj.CopyComplete
 E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.dll
 E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.pdb
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\bin\Debug\netcoreapp2.2\FundooData.deps.json
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\bin\Debug\netcoreapp2.2\FundooData.runtimeconfig.json
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\bin\Debug\netcoreapp2.2\FundooData.runtimeconfig.dev.json
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\bin\Debug\netcoreapp2.2\FundooData.dll
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\bin\Debug\netcoreapp2.2\FundooData.pdb
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.csprojAssemblyReference.cache
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.AssemblyInfoInputs.cache
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.AssemblyInfo.cs
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.csproj.CopyComplete
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.dll
+E:\New folder (3)\FundooNotes-fundooBackend\FundooData\obj\Debug\netcoreapp2.2\FundooData.pdb

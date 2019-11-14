@@ -14,3 +14,19 @@ E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\net
 E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.csproj.CopyComplete
 E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.dll
 E:\FundooNotes-fundooBackend\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.pdb
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.deps.json
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.runtimeconfig.json
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.runtimeconfig.dev.json
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.dll
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooNotes.pdb
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooData.dll
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\bin\Debug\netcoreapp2.2\FundooData.pdb
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.csprojAssemblyReference.cache
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.RazorAssemblyInfo.cache
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.RazorAssemblyInfo.cs
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.AssemblyInfoInputs.cache
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.AssemblyInfo.cs
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.RazorTargetAssemblyInfo.cache
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.csproj.CopyComplete
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.dll
+E:\New folder (3)\FundooNotes-fundooBackend\FundooNotes\obj\Debug\netcoreapp2.2\FundooNotes.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj": {}
+    "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj": {}
   },
   "projects": {
-    "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj": {
+    "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj",
+        "projectUniqueName": "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj",
         "projectName": "FundooData",
-        "projectPath": "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj",
+        "projectPath": "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooData\\FundooData.csproj",
         "packagesPath": "C:\\Users\\Bridgelabz\\.nuget\\packages\\",
-        "outputPath": "E:\\FundooApp\\FundooNotes-fundooBackend\\FundooNotes-fundooBackend\\FundooData\\obj\\",
+        "outputPath": "E:\\New folder (3)\\FundooNotes-fundooBackend\\FundooData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
