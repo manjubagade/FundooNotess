@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+  hide = true;
 
   constructor(private service:AppService,private router:Router) { }
 firstName=new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z]*')]);
