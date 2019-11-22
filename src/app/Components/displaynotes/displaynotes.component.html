@@ -5,7 +5,7 @@
       <mat-card *ngIf="note.isPin == true" fxLayoutGap="20px" class="cardDisplay"
         [style.background-color]=note.colorCode>
         <div>
-          <mat-icon class="pin" (click)='unpinnote(note)'>
+          <mat-icon class="pin" (click)='unpinnote(note)' matTooltip="UNPINNOTE">
             <img src="../../../assets/pinAfterClick(1).svg" />
           </mat-icon>
           <div (click)="openDialog(note)">
@@ -74,7 +74,7 @@
       <mat-card *ngIf="note.isPin == false" fxLayoutGap="20px" class="cardDisplay"
         [style.background-color]=note.colorCode>
         <div>
-          <mat-icon class="pin" (click)='pinnote(note)'>
+          <mat-icon class="pin" (click)='pinnote(note)' matTooltip="PINNOTE">
             <img src="../../../assets/pinBeforeClick.svg" />
           </mat-icon>
           <div (click)="openDialog(note)">

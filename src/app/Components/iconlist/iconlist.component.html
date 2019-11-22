@@ -1,6 +1,6 @@
 <div class = "icon">
 <button mat-icon-button  [matMenuTriggerFor]="menureminder">
-    <mat-icon class="material-icons">add_alert</mat-icon>
+    <mat-icon class="material-icons" matTooltip="Remind Me">add_alert</mat-icon>
 </button>
 
 <mat-menu #menureminder="matMenu">
@@ -11,28 +11,28 @@
 </mat-menu>
 
   <button style="outline: none" mat-icon-button (click)="openDialog(card)">
-    <mat-icon class="mat-18">person_add</mat-icon>
+    <mat-icon class="mat-18" matTooltip="Collaborator">person_add</mat-icon>
   </button>
 
   <button style="outline: none" mat-icon-button  [matMenuTriggerFor]="colorMenu">
-    <mat-icon class="mat-18">color_lens</mat-icon>
+    <mat-icon class="mat-18" matTooltip="Change color">color_lens</mat-icon>
   </button>
 
   <button style="outline: none" mat-icon-button (click)="selectFile.click()">
      <input style="display: none" type="file" #selectFile>
-    <mat-icon class="mat-18">photo</mat-icon>
+    <mat-icon class="mat-18" matTooltip="Add Image">photo</mat-icon>
   </button>
 
   <button style="outline: none" mat-icon-button *ngIf='type!="archive"' matTooltip="Archive" (click)="setArchive(card)" >
-      <mat-icon class="mat-18">archive</mat-icon>
+      <mat-icon class="mat-18" matTooltip="Archive">archive</mat-icon>
   </button>
 
   <button style="outline: none" mat-icon-button *ngIf='type=="archive"' matTooltip="Archive" (click)="doUnArchive(card)">
-      <mat-icon class="mat-18">unarchive</mat-icon>
+      <mat-icon class="mat-18" matTooltip="UnArchive">unarchive</mat-icon>
   </button>
 
   <button style="outline: none" mat-icon-button  [matMenuTriggerFor]="menu">
-    <i class="material-icons">more_vert</i>
+    <i class="material-icons" matTooltip="More">more_vert</i>
   </button>
 
   <mat-menu #menu="matMenu">

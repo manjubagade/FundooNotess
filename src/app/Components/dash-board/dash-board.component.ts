@@ -25,6 +25,7 @@ export class DashBoardComponent implements OnDestroy {
   userid:any;
   email: string;
   value;
+  spinner:any;
   selectedFile: File;
   useremail=localStorage.getItem('email')
   photo=localStorage.getItem('imgUrl');
@@ -122,6 +123,11 @@ this.data.changeMessage(this.value)
     }
     );
   }
+  refresh() {
+    window.location.reload();
+    this.spinner.show();
+  }
+
 
   
 }

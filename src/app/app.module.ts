@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatTableModule, MatFormFieldModule, MatDialogModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatTableModule, MatFormFieldModule, MatDialogModule, MatTooltipModule } from '@angular/material';
 import { MatToolbarModule, MatToolbarRow } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { RegistrationComponent } from '../app/Components/registration/registration.component';
@@ -99,7 +99,7 @@ export function getAuthServiceConfigs() {
     SocialLoginModule,
     DragDropModule,
     BrowserModule,
-    Ng2SearchPipeModule,
+    Ng2SearchPipeModule,MatTooltipModule
     
   ],
   providers: [AuthGuard, AsyncPipe, {

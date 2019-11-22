@@ -1,5 +1,5 @@
 <div background-color="white" class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="white" class="example-toolbar">
+    <mat-toolbar color="white" class="example-toolbar" style="background-color: white;">
     <div fxLayout='row' fxFlex='100'>
     <div>
     <button mat-icon-button (click)="snav.toggle()" style="outline:none"><mat-icon>menu</mat-icon></button>
@@ -19,8 +19,17 @@
     
     <input  class="search" fxFlex="90" [(ngModel)]="value"  (keyup)="lookfor()" (click)='goSearch()'matInput placeholder="Search"
     [style.fontSize.px]="16" class="search-window" autocomplete="off">
+    <button mat-icon-button class="search-button" style="outline:none">
+      <mat-icon matTooltip="clear">clear</mat-icon>
+      </button>
     </mat-form-field>
     </div>
+    </div>
+    <div>
+      <button mat-icon-button style="margin-top: 8px;margin-right:20px;" class="togle"  matTooltip="Refresh">
+        <mat-icon class="Refresh" aria-label="refresh Button" color="accent" [ngStyle]="{'color':'rgb(95, 99, 99)'}"
+            (click)="refresh()">refresh</mat-icon>
+        </button>
     </div>
     <!-- grid and list -->
     <button
@@ -39,6 +48,11 @@
         src="../../../assets/list.svg"
     /></mat-icon>
   </button>
+  <div>
+    <button mat-icon-button style="margin-top: 8px;margin-left: 20px;margin-right: 20px;">
+      <mat-icon matTooltip="settings">settings</mat-icon>
+      </button>
+  </div>
     <div fxFlex fxLayout='row' fxLayoutAlign="end center" >
     <div > 
     <button class="profile"  mat-fab [matMenuTriggerFor]="menu" color='disabled' style="outline:none" [ngStyle]="{'background-image': 'url(' + photo + ')'}"></button>
@@ -47,17 +61,20 @@
       <input style="display: none" type="file"  #file (change)="onFileChanged($event)"  id="selectedFile" #select >
       <button class="profile" (click)="select.click()"  [ngStyle]="{'background-image': 'url(' + photo + ')'}" mat-fab></button>
       <div>{{useremail}}</div>
-        <button mat-menu-item (click)="signout()" routerLink="/login" >sign out</button>   
+        <button mat-menu-item (click)="signout()" routerLink="/login" matTooltip="Log out">sign out</button>   
       </mat-menu>
     </div>   
     </div>
     </div>
     </mat-toolbar>
+    <div>
+      <mat-divider></mat-divider>
+    </div>
     
     <mat-sidenav-container class="example-sidenav-container" 
     [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" #snav mode="side" opened class="example-sidenav" style="width:260px" style="border:0px;"> 
+    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" #snav mode="side" opened class="example-sidenav" style="width:260px" style="border:0px;" style="background-color: white;">  
     <mat-nav-list>
     <div class="paddingnote" >
     <a mat-button  routerLink= "." >
