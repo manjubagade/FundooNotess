@@ -18,6 +18,8 @@ export class DisplaynotesComponent implements OnInit {
   cards: any;
   allLabels: any;
   notesLabels: any;
+  flag = true;
+  css = 'row wrap'
   userId;
   notesCollaborator: any;
   searchText:string=''
@@ -53,6 +55,13 @@ export class DisplaynotesComponent implements OnInit {
   ngOnInit() {
     this.token = localStorage.getItem('token')
     this.payLoad = jwt_decode(this.token)
+     this.data.currentMessages.subscribe(data => {
+
+      this.css = data ? 'row wrap' : 'column'
+       
+     this.flag=data;
+
+    });
     // this.getallnotes();
   }
 

@@ -6,7 +6,7 @@
 <mat-divider></mat-divider>
 <div *ngFor="let label of notesLabel">
   <div fxLayout="row">
-      <i class="material-icons" (click)="delete(label)">delete </i>
+      <mat-icon class="material-icons" (click)="delete(label)" matTooltip="Delete Label">delete </mat-icon>
   <input mat-input [(ngModel)]=label.labels>
   <mat-icon (click)="update(label)">done</mat-icon>
     

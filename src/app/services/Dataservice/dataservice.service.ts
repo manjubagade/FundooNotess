@@ -12,6 +12,10 @@ export class DataserviceService {
   private _dashboard = new Subject<Boolean>();
   dash$ = this._dashboard.asObservable();
 
+  private messageSources = new BehaviorSubject(true);
+  currentMessages = this.messageSources.asObservable();
+
+
   constructor() { }
 
  viewlist(value :boolean){
@@ -24,6 +28,9 @@ export class DataserviceService {
     this.messageSource.next(message)
   }
 
-
+ 
+  changeMessages(current:boolean){
+    this.messageSources.next(current);
+    }
 
 }

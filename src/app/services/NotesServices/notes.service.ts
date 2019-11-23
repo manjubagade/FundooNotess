@@ -26,7 +26,7 @@ export class NotesService {
 }
 
 deleteNote(result){
-  return this.http.delete(this.link,
+  return this.http.delete(this.link + '/Delete',
     { params:{
       id:result.id
     }

@@ -15,7 +15,8 @@ import {DataserviceService} from '../../services/Dataservice/dataservice.service
 })
 export class DashBoardComponent implements OnDestroy {
   // tslint:disable-next-line: variable-name
-  headName = "FUNDOO NOTES";
+  headName = "FUNDOO NOTE";
+  view: boolean = true;
   private _mobileQueryListener: () => void;
   mobileQuery: MediaQueryList;
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
@@ -52,20 +53,24 @@ export class DashBoardComponent implements OnDestroy {
   }
   islist;
   isClicked;
-  changeview() {
-    // debugger
-    if (this.islist) {
-      this.islist = false;
-      this.isClicked = true;
-    }
+  // changeview() {
+  //   // debugger
+  //   if (this.islist) {
+  //     this.islist = false;
+  //     this.isClicked = true;
+  //   }
 
-    else {
+  //   else {
 
-      this.isClicked = false;
-      console.log("grid", this.isClicked);
-      this.islist = true;
-    }
-    this.notes.gridview();
+  //     this.isClicked = false;
+  //     console.log("grid", this.isClicked);
+  //     this.islist = true;
+  //   }
+  //   this.notes.gridview();
+  // }
+  changeView() {
+    this.view = !this.view;
+    this.data.changeMessages(this.view);
   }
 
   lookfor(){

@@ -1,13 +1,16 @@
 <!-- diaplay notes -->
-<div class="notesDisplay">
-  <div *ngFor="let note of noteCards |searchbar:search " cdkDrag>
+<div class="notesDisplay" >
+  <div *ngFor="let note of noteCards |searchbar:search " cdkDrag >
     <div>
       <mat-card *ngIf="note.isPin == true" fxLayoutGap="20px" class="cardDisplay"
-        [style.background-color]=note.colorCode>
+        [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }" fxFlexOffset.xs='-10'>
         <div>
-          <mat-icon class="pin" (click)='unpinnote(note)' matTooltip="UNPINNOTE">
-            <img src="../../../assets/pinAfterClick(1).svg" />
-          </mat-icon>
+          <div fxLayout="row" fxLayoutAlign="end start">
+              <mat-icon class="pin" (click)='unpinnote(note)' matTooltip="UNPINNOTE" >
+                  <img src="../../../assets/pinAfterClick(1).svg" />
+                </mat-icon>
+          </div>
+          
           <div (click)="openDialog(note)">
             <div>
               <mat-card-title class="titleinput">{{note.title}}</mat-card-title>
@@ -72,11 +75,14 @@
   <div *ngFor="let note of noteCards | searchbar:search " cdkDrag>
     <div>
       <mat-card *ngIf="note.isPin == false" fxLayoutGap="20px" class="cardDisplay"
-        [style.background-color]=note.colorCode>
+        [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }" fxFlexOffset.xs='-10'>
         <div>
-          <mat-icon class="pin" (click)='pinnote(note)' matTooltip="PINNOTE">
-            <img src="../../../assets/pinBeforeClick.svg" />
-          </mat-icon>
+          <div fxLayout="row" fxLayoutAlign="end start">
+              <mat-icon class="pin" (click)='pinnote(note)' matTooltip="PINNOTE">
+                  <img src="../../../assets/pinBeforeClick.svg" />
+                </mat-icon>
+          </div>
+         
           <div (click)="openDialog(note)">
             <div>
               <mat-card-title class="titleinput">{{note.title}}</mat-card-title>

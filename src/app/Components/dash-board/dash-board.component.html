@@ -4,13 +4,13 @@
     <div>
     <button mat-icon-button (click)="snav.toggle()" style="outline:none"><mat-icon>menu</mat-icon></button>
     </div>
-    <div>
+    <div fxHide.xs>
     <img src="../../assets/keep_48dp.png">
     </div>
-    <div>
+    <div fxHide.xs >
     <h1 class="example-app-name">{{headName}}</h1>
     </div>
-    <div  fxFlex="60"  class = "search" fxFlexOffset='10' fxFlexOffset.md='10' fxFlexOffset.sm='5' fxFlexOffset.xs='2' fxHide.xs='true'>
+    <div  fxFlex="60"  class = "search" fxFlexOffset='10' fxFlexOffset.md='10' fxFlexOffset.sm='5' fxFlexOffset.xs='2'>
     <div fxFlex="80"  >
     <mat-form-field fxFlex='100' appearance="outline" fxHide.xs [style.fontSize.px]="2" class="search" div fxLayout="row">
     <button mat-icon-button class="search-button" style="outline:none">
@@ -32,24 +32,36 @@
         </button>
     </div>
     <!-- grid and list -->
+  <div style="padding-top:10px ;">
     <button
     mat-icon-button
     color="basic"
     id="grid"
     fxHide.xs
-    matTooltip="Grid view"
+    matTooltip="List view"
+    class="togle"
+    *ngIf='view==false' (click)='changeView()'
   >
     <mat-icon>
-      <img *ngIf="islist" (click) ="changeview()"
-      
-        src="../../../assets/Grid.svg"/>
-      <img isClicked
-      *ngIf="isClicked" (click) ="changeview()"
-        src="../../../assets/list.svg"
-    /></mat-icon>
+      grid_view
+    </mat-icon>
   </button>
-  <div>
-    <button mat-icon-button style="margin-top: 8px;margin-left: 20px;margin-right: 20px;">
+  <button
+    mat-icon-button
+    color="basic"
+    id="grid"
+    fxHide.xs
+    matTooltip="Grid View"
+    class="togle"
+    
+    *ngIf='view==true' (click)='changeView()' 
+  >
+  <img src="../../../assets/list.svg" >
+  </button>
+  
+  </div>
+  <div >
+    <button mat-icon-button style="margin-top: 8px;margin-left: 20px;margin-right: 20px;" >
       <mat-icon matTooltip="settings">settings</mat-icon>
       </button>
   </div>
