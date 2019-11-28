@@ -1,11 +1,11 @@
 <!-- diaplay notes -->
 <div class="notesDisplay" >
   <div *ngFor="let note of noteCards |searchbar:search " cdkDrag >
-    <div>
+    <div id="DivForHoverItem">
       <mat-card *ngIf="note.isPin == true" fxLayoutGap="20px" class="cardDisplay"
-        [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }" fxFlexOffset.xs='-10'>
+        [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }" fxFlexOffset.xs='-10' >
         <div>
-          <div fxLayout="row" fxLayoutAlign="end start">
+          <div fxLayout="row" fxLayoutAlign="end start" id="Hidden">
               <mat-icon class="pin" (click)='unpinnote(note)' matTooltip="UNPINNOTE" >
                   <img src="../../../assets/pinAfterClick(1).svg" />
                 </mat-icon>
@@ -61,7 +61,7 @@
               <button mat-menu-item (click)="Restore(note)">Restore</button>
             </mat-menu>
           </div>
-          <div *ngIf='cond!="trash"'>
+          <div *ngIf='cond!="trash"' id="Hidden">
             <app-iconlist [card]='note' (update)='updateCome($event)' [type]='type'></app-iconlist>
           </div>
         </div>
@@ -71,13 +71,13 @@
 </div>
 <!-- unpin -->
 <!-- <input type="text" [(ngModel)]="searchText" placeholder="name"> -->
-<div class="notesDisplay" cdkDropList (cdkDropListDropped)="drop($event)">
+<div class="notesDisplay" cdkDropList (cdkDropListDropped)="drop($event)" >
   <div *ngFor="let note of noteCards | searchbar:search " cdkDrag>
-    <div>
+    <div id="DivForHoverItem">
       <mat-card *ngIf="note.isPin == false" fxLayoutGap="20px" class="cardDisplay"
         [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }" fxFlexOffset.xs='-10'>
         <div>
-          <div fxLayout="row" fxLayoutAlign="end start">
+          <div fxLayout="row" fxLayoutAlign="end start" id="Hidden" >
               <mat-icon class="pin" (click)='pinnote(note)' matTooltip="PINNOTE">
                   <img src="../../../assets/pinBeforeClick.svg" />
                 </mat-icon>
@@ -132,7 +132,7 @@
               <button mat-menu-item (click)="Restore(note)">Restore</button>
             </mat-menu>
           </div>
-          <div *ngIf='cond!="trash"'>
+          <div *ngIf='cond!="trash"' id="Hidden" >
             <app-iconlist (update)='updateCome($event)' [card]='note' [type]='type'></app-iconlist>
           </div>
         </div>

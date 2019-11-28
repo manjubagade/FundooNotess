@@ -40,7 +40,12 @@
   border-radius: 10px;
   outline: none;
 }
-
+#Hidden {
+  visibility: hidden
+}
+#DivForHoverItem:hover #Hidden {
+  visibility: visible;
+}
 .fundoo-card {
   width: 481px;
   margin-top: 37px;

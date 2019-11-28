@@ -71,6 +71,24 @@ export class IconlistComponent implements OnInit {
       console.log(err);
     })
   }
+  public uploadFile = (files) => {
+    if (files.length === 0) {
+      console.log(files);
+      return
+    }
+
+     let fileToUpload = <File>files[0];
+  //   const formData = new FormData();
+  //   formData.append('file', fileToUpload, fileToUpload.name);
+  //  // var id = this.cards.id;
+  //   this.service.AddImage(id, formData).subscribe(data => {
+  //     this.setColor.emit(this.uploadFile);
+     
+  //   })
+
+
+  }
+
 
   DeleteNote(card)
   {

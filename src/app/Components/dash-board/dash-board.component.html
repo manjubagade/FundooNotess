@@ -1,7 +1,7 @@
 <div background-color="white" class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="white" class="example-toolbar" style="background-color: white;">
+    <mat-toolbar color="white" class="example-toolbar" style="background-color: white;margin-top:9px;">
     <div fxLayout='row' fxFlex='100'>
-    <div>
+    <div style="margin-top: 8px;margin-right:8px;">
     <button mat-icon-button (click)="snav.toggle()" style="outline:none"><mat-icon>menu</mat-icon></button>
     </div>
     <div fxHide.xs>
@@ -25,14 +25,14 @@
     </mat-form-field>
     </div>
     </div>
-    <div>
-      <button mat-icon-button style="margin-top: 8px;margin-right:20px;" class="togle"  matTooltip="Refresh">
+    <div style="margin-top: 8px;margin-right:20px;">
+      <button mat-icon-button  class="togle"  matTooltip="Refresh">
         <mat-icon class="Refresh" aria-label="refresh Button" color="accent" [ngStyle]="{'color':'rgb(95, 99, 99)'}"
             (click)="refresh()">refresh</mat-icon>
         </button>
     </div>
     <!-- grid and list -->
-  <div style="padding-top:10px ;">
+  <div style="margin-top: 8px;margin-right:20px;">
     <button
     mat-icon-button
     color="basic"
@@ -60,13 +60,17 @@
   </button>
   
   </div>
-  <div >
-    <button mat-icon-button style="margin-top: 8px;margin-left: 20px;margin-right: 20px;" >
-      <mat-icon matTooltip="settings">settings</mat-icon>
-      </button>
-  </div>
+  <div style="margin-top: 8px;margin-right:20px;">
+      <button mat-icon-button [matMenuTriggerFor]="menu1" matTooltip="Setting">
+        <mat-icon>settings</mat-icon></button>
+      <mat-menu #menu1="matMenu">
+          <button mat-menu-item  >Setting</button>
+          <button mat-menu-item>SendFeedBack</button>
+          <button mat-menu-item>Help</button>
+      </mat-menu> 
+  </div >
     <div fxFlex fxLayout='row' fxLayoutAlign="end center" >
-    <div > 
+    <div style="margin-right:10px;"> 
     <button class="profile"  mat-fab [matMenuTriggerFor]="menu" color='disabled' style="outline:none" [ngStyle]="{'background-image': 'url(' + photo + ')'}"></button>
     <mat-menu #menu="matMenu">
       <!-- <button inputType="file"></button> -->
