@@ -32,6 +32,8 @@ export class NotesComponent implements OnInit {
   getallnotes()
   {
     this.notes.getNotes(this.payLoad.UserID).subscribe(data =>{
+      console.log(data);
+      
       this.noteCards=[];
       this.cards=data[0].notesData;
       this.cards.forEach(element => {
@@ -41,10 +43,12 @@ export class NotesComponent implements OnInit {
         else
         this.noteCards.push(element);
       });
+      console.log(this.noteCards);
+
     },err=>{
       console.log(err);
       
-    })
+    }) 
   }
   
   update(value){

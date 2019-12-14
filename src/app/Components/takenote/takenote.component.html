@@ -1,44 +1,48 @@
-<div *ngIf="!isOpen"  class="addNote" (click)="isOpen=true" >
+<div *ngIf="!isOpen" class="addNote" (click)="isOpen=true">
 
-    Take a note ...
-     
-    <button mat-icon-button   style="left: 9.3cm">
-  <mat-icon aria-label="Example icon-button with a heart icon">
-    check_box 
-  
-  </mat-icon>
-  </button>
-  <button mat-icon-button  style="left: 9.5cm" var=showBrush>
-  <mat-icon aria-label="Example icon-button with a heart icon">
-    brush
-  </mat-icon>
-  </button>
-  <button mat-icon-button   style="left: 9.6cm">
-  <mat-icon aria-label="Example icon-button with a heart icon">
-    image
-  </mat-icon> 
-  </button>
-  
-  </div>
-  
-  <div *ngIf="isOpen"  class="addNote" [style.background-color]=bgcolor>
-    <div class="addNoteInputDiv">
-  
-      <textarea  class="addNoteTitleInput" [style.background-color]=bgcolor [formControl]="title"  placeholder="Title"><strong>{{hello}}</strong></textarea>
-  
-     
-      <button class="pinIcon" (click)=changePin()>
+  Take a note ...
 
-      </button>
-      <label></label>
-      <textarea class="addNoteInput" [style.background-color]=bgcolor [formControl]="TakeANote" placeholder="Take a note..." ></textarea>
-  
+  <button mat-icon-button style="left: 9.3cm">
+    <mat-icon aria-label="Example icon-button with a heart icon">
+      check_box
+
+    </mat-icon>
+  </button>
+  <button mat-icon-button style="left: 9.5cm" var=showBrush>
+    <mat-icon aria-label="Example icon-button with a heart icon">
+      brush
+    </mat-icon>
+  </button>
+  <button mat-icon-button style="left: 9.6cm">
+    <mat-icon aria-label="Example icon-button with a heart icon">
+      image
+    </mat-icon>
+  </button>
+
+</div>
+
+<div *ngIf="isOpen" class="addNote" [style.background-color]=bgcolor>
+  <div class="addNoteInputDiv">
+
+    <textarea class="addNoteTitleInput" [style.background-color]=bgcolor [formControl]="title"
+      placeholder="Title"><strong>{{hello}}</strong></textarea>
+
+
+    <button class="pinIcon" (click)=changePin()>
+
+    </button>
+    <label></label>
+    <textarea class="addNoteInput" [style.background-color]=bgcolor [formControl]="TakeANote"
+      placeholder="Take a note..."><strong>{{hello}}</strong></textarea>
+
+  </div>
+  <div fxLayout='row'>
+
+    <div>
+      <app-iconlist (setcolortoNote)="setcolor($event)"></app-iconlist>
     </div>
-    <div fxLayout='row'>
-      
-      <div><app-iconlist (setcolortoNote)="setcolor($event)"></app-iconlist></div>
-    <div class="addNoteControlIcon"  >
-      <button mat-button   (click)="isOpen=false" style="left:7cm"  (click)="AddNotes()">close </button>
+    <div class="addNoteControlIcon">
+      <button mat-button (click)="isOpen=false" style="left:7cm" (click)="AddNotes()">close </button>
     </div>
   </div>
-    </div>  
+</div>

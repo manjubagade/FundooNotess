@@ -7,6 +7,7 @@
     left: 0;
     right: 0;
     }
+   
     
     .example-is-mobile .example-toolbar {
     position: fixed;
@@ -20,6 +21,7 @@
     
     .example-sidenav-container {
     flex: 1;
+    background-color: white;
     }
     
     .example-is-mobile .example-sidenav-container {
@@ -31,19 +33,59 @@ width: -webkit-fill-available;
 } 
 
 .example-sidenav {
-    background-color:whitesmoke;
-    padding: 20px;
-    width: 250px;
+    background-color:white;
+    padding: 0px;
+    width: 265px;
+    border-right: 0px;
+   // height: 100px;
+ // width: 50%;
+  margin: 0 auto;
+  //@at-rootoverflow: hidden;
+  overflow-y: hidden;
+  }
+  .example-sidenav:hover{
+   // overflow-y: scroll;
+   // color: grey;
+   overflow: scroll;
   }
 
   .profile {
       background-size: cover
   }
   .paddingnote {
-      padding-right:30px;
-      padding-bottom: 20px;
-      font-size: large;
+     // padding-right:30px;
+    //  padding-bottom: 20px;
+    //  padding-left: 20px;
+      font-size: medium;
       font-family: Arial, Helvetica, sans-serif;
+      width:100%;
+    text-align: left;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 12px;
+   // margin-top:10px;
+      
+  }
+  .star{
+    width:100%;
+    text-align: left;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    outline: none;
+   // padding: 8px;
+   // margin-top:10px;
+   // padding-right:30px;
+   // padding-bottom: 20px;
+   // padding-left: 20px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  a:focus{
+      background-color: rgb(253, 200, 100);
+      color: black;
   }
   .example-app-name{
       margin-top: 8px;
@@ -52,4 +94,21 @@ width: -webkit-fill-available;
     border: none;
     outline: none;
   }
-  
+  #focus{
+    background-color:rgb(253, 200, 100);
+    color: black;
+  }
+  #focuss:focus #focus{
+      background-color: red($color: #000000);
+  }
+  .sidenav-list{
+    letter-spacing: .01785714em;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    border-width: 100px;
+    //width: 100%;
+    background-color:#feefc3;
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+    
+}

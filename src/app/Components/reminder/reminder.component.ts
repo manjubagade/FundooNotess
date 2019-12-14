@@ -25,4 +25,7 @@ export class ReminderComponent implements OnInit {
     console.log(err);
   })
 }
+closed(value){
+  this.reminderCards();
+}
 }

@@ -1,139 +1,140 @@
 <div background-color="white" class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="white" class="example-toolbar" style="background-color: white;margin-top:9px;">
+  <mat-toolbar color="white" class="example-toolbar" style="background-color: white;">
     <div fxLayout='row' fxFlex='100'>
-    <div style="margin-top: 8px;margin-right:8px;">
-    <button mat-icon-button (click)="snav.toggle()" style="outline:none"><mat-icon>menu</mat-icon></button>
-    </div>
-    <div fxHide.xs>
-    <img src="../../assets/keep_48dp.png">
-    </div>
-    <div fxHide.xs >
-    <h1 class="example-app-name">{{headName}}</h1>
-    </div>
-    <div  fxFlex="60"  class = "search" fxFlexOffset='10' fxFlexOffset.md='10' fxFlexOffset.sm='5' fxFlexOffset.xs='2'>
-    <div fxFlex="80"  >
-    <mat-form-field fxFlex='100' appearance="outline" fxHide.xs [style.fontSize.px]="2" class="search" div fxLayout="row">
-    <button mat-icon-button class="search-button" style="outline:none">
-    <mat-icon matTooltip="Search">search</mat-icon>
-    </button>
-    
-    <input  class="search" fxFlex="90" [(ngModel)]="value"  (keyup)="lookfor()" (click)='goSearch()'matInput placeholder="Search"
-    [style.fontSize.px]="16" class="search-window" autocomplete="off">
-    <button mat-icon-button class="search-button" style="outline:none">
-      <mat-icon matTooltip="clear">clear</mat-icon>
-      </button>
-    </mat-form-field>
-    </div>
-    </div>
-    <div style="margin-top: 8px;margin-right:20px;">
-      <button mat-icon-button  class="togle"  matTooltip="Refresh">
-        <mat-icon class="Refresh" aria-label="refresh Button" color="accent" [ngStyle]="{'color':'rgb(95, 99, 99)'}"
-            (click)="refresh()">refresh</mat-icon>
-        </button>
-    </div>
-    <!-- grid and list -->
-  <div style="margin-top: 8px;margin-right:20px;">
-    <button
-    mat-icon-button
-    color="basic"
-    id="grid"
-    fxHide.xs
-    matTooltip="List view"
-    class="togle"
-    *ngIf='view==false' (click)='changeView()'
-  >
-    <mat-icon>
-      grid_view
-    </mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    color="basic"
-    id="grid"
-    fxHide.xs
-    matTooltip="Grid View"
-    class="togle"
-    
-    *ngIf='view==true' (click)='changeView()' 
-  >
-  <img src="../../../assets/list.svg" >
-  </button>
-  
-  </div>
-  <div style="margin-top: 8px;margin-right:20px;">
-      <button mat-icon-button [matMenuTriggerFor]="menu1" matTooltip="Setting">
-        <mat-icon>settings</mat-icon></button>
-      <mat-menu #menu1="matMenu">
-          <button mat-menu-item  >Setting</button>
-          <button mat-menu-item>SendFeedBack</button>
-          <button mat-menu-item>Help</button>
-      </mat-menu> 
-  </div >
-    <div fxFlex fxLayout='row' fxLayoutAlign="end center" >
-    <div style="margin-right:10px;"> 
-    <button class="profile"  mat-fab [matMenuTriggerFor]="menu" color='disabled' style="outline:none" [ngStyle]="{'background-image': 'url(' + photo + ')'}"></button>
-    <mat-menu #menu="matMenu">
-      <!-- <button inputType="file"></button> -->
-      <input style="display: none" type="file"  #file (change)="onFileChanged($event)"  id="selectedFile" #select >
-      <button class="profile" (click)="select.click()"  [ngStyle]="{'background-image': 'url(' + photo + ')'}" mat-fab></button>
-      <div>{{useremail}}</div>
-        <button mat-menu-item (click)="signout()" routerLink="/login" matTooltip="Log out">sign out</button>   
-      </mat-menu>
-    </div>   
-    </div>
-    </div>
-    </mat-toolbar>
-    <div>
-      <mat-divider></mat-divider>
-    </div>
-    
-    <mat-sidenav-container class="example-sidenav-container" 
-    [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" #snav mode="side" opened class="example-sidenav" style="width:260px" style="border:0px;" style="background-color: white;">  
-    <mat-nav-list>
-    <div class="paddingnote" >
-    <a mat-button  routerLink= "." >
-    <i class="material-icons" style="padding-right: 25px;">lightbulb_outline</i>Notes </a>
-    </div>
-     <div class="paddingnote">
-    <a mat-button (click)="headName='Reminders'" routerLink="/dashboard/reminder" >
-    <i class="material-icons" style="padding-right: 25px">notifications</i>Reminder </a>
-    </div>
-    <mat-divider></mat-divider>
-    <!-- labels -->
-    <div *ngFor="let label of notesLabel">
-        <button mat-button class="sidebutton"  (click)="LabelRedirect(label)">
-          <div  fxLayout="row" >
-          <div class="imageopac">
-            <img src="../../../assets/outline-label-24px.svg" />
-          </div>
-          <div class="button-r" style="margin-left:32px">{{label.labels}}</div>
-        </div>
+      <div style="margin-top: 8px;margin-right:8px;">
+        <button mat-icon-button (click)="snav.toggle()" style="outline:none">
+          <mat-icon>menu</mat-icon>
         </button>
       </div>
-    <div class="paddingnote">
-    <a mat-button (click)="openDialog()">
-    <i class="material-icons" style="padding-right: 25px"> edit </i>Edit Label </a>
+      <div fxHide.xs>
+        <img src="../../assets/keep_48dp.png">
+      </div>
+      <div fxHide.xs>
+        <h1 class="example-app-name">{{headName}}</h1>
+      </div>
+      <div fxFlex="60" class="search" fxFlexOffset='10' fxFlexOffset.md='10' fxFlexOffset.sm='5' fxFlexOffset.xs='2'>
+        <div fxFlex="80">
+          <mat-form-field fxFlex='100' appearance="outline" fxHide.xs [style.fontSize.px]="2" class="search" div
+            fxLayout="row">
+            <button mat-icon-button class="search-button" style="outline:none">
+              <mat-icon matTooltip="Search">search</mat-icon>
+            </button>
+
+            <input class="search" fxFlex="90" [(ngModel)]="value" (keyup)="lookfor()" (click)='goSearch()' matInput
+              placeholder="Search" [style.fontSize.px]="16" class="search-window" autocomplete="off">
+            <button mat-icon-button class="search-button" style="outline:none">
+              <mat-icon matTooltip="clear">clear</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+      <div style="margin-top: 8px;margin-right:20px;">
+        <button mat-icon-button class="togle" matTooltip="Refresh">
+          <mat-icon class="Refresh" aria-label="refresh Button" color="accent" [ngStyle]="{'color':'rgb(95, 99, 99)'}"
+            (click)="refresh()">refresh</mat-icon>
+        </button>
+      </div>
+      <!-- grid and list -->
+      <div style="margin-top: 8px;margin-right:20px;">
+        <button mat-icon-button color="basic" id="grid" fxHide.xs matTooltip="List view" class="togle"
+          *ngIf='view==false' (click)='changeView()'>
+          <mat-icon>
+            grid_view
+          </mat-icon>
+        </button>
+        <button mat-icon-button color="basic" id="grid" fxHide.xs matTooltip="Grid View" class="togle"
+          *ngIf='view==true' (click)='changeView()'>
+          <img src="../../../assets/list.svg">
+        </button>
+
+      </div>
+      <div style="margin-top: 8px;margin-right:20px;">
+        <button mat-icon-button [matMenuTriggerFor]="menu1" matTooltip="Setting">
+          <mat-icon>settings</mat-icon>
+        </button>
+        <mat-menu #menu1="matMenu">
+          <button mat-menu-item >Setting</button>
+          <button mat-menu-item>SendFeedBack</button>
+          <button mat-menu-item>Help</button>
+        </mat-menu>
+      </div>
+      <div fxFlex fxLayout='row' fxLayoutAlign="end center">
+        <div style="margin-right:10px;">
+          <button class="profile" mat-fab [matMenuTriggerFor]="menu" color='disabled' style="outline:none"
+            [ngStyle]="{'background-image': 'url(' + photo + ')'}"></button>
+          <mat-menu #menu="matMenu">
+            <!-- <button inputType="file"></button> -->
+            <input style="display: none" type="file" #file (change)="onFileChanged($event)" id="selectedFile" #select>
+            <button class="profile" (click)="select.click()" [ngStyle]="{'background-image': 'url(' + photo + ')'}"
+              mat-fab></button>
+            <div>{{useremail}}</div>
+            <button mat-menu-item (click)="signout()" routerLink="/login" matTooltip="Log out">sign out</button>
+          </mat-menu>
+        </div>
+      </div>
     </div>
+  </mat-toolbar>
+  <div>
     <mat-divider></mat-divider>
-    <div class="paddingnote">
-            <a mat-button (click)="headName='Archive'" routerLink="/dashboard/archivenotes">
-                    <i class="material-icons" style="padding-right: 25px">archive</i>Archive
-            </a>
-    </div>
-    <div class="paddingnote">
-            <a mat-button (click)="headName='Trash'" routerLink="/dashboard/trash">
-                    <i class="material-icons" style="padding-right: 25px"> delete </i> Trash
-            </a>
-    </div>
-    </mat-nav-list>
+  </div>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56" #snav mode="side" opened class="example-sidenav" style="width:260px" style="border-right:0px;"
+      style="background-color: white;">
+      <mat-nav-list>
+        <div class="paddingnote">
+          <a mat-button routerLink="." class="star" (click)="headName='Fundoo Notes'" >
+            <i class="material-icons" style="padding-right: 35px;">lightbulb_outline</i>Notes </a>
+        </div>
+        <div class="paddingnote">
+          <a mat-button (click)="headName='Reminders'" routerLink="/dashboard/reminder" class="star">
+            <i class="material-icons" style="padding-right: 35px">notifications</i>Reminder </a>
+        </div>
+        <mat-divider></mat-divider>
+        <!-- labels -->
+        <div >
+          <label style="padding-left: 25px; padding-top: 10px;">Labels</label>
+        </div>
+        <div *ngFor="let label of notesLabel">
+          <button mat-button class="sidebutton" (click)="LabelRedirect(label)">
+            <div fxLayout="row">
+              <div class="paddingnote">
+                <img src="../../../assets/outline-label-24px.svg" />
+              </div>
+              <div class="paddingnote">{{label.labels}}</div>
+            </div>
+          </button>
+        </div>
+        <div class="paddingnote">
+          <a mat-button (click)="openDialog()" class="star">
+            <i class="material-icons" style="padding-right: 35px;"> edit </i>Edit Label </a>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="paddingnote">
+          <a mat-button (click)="headName='Archive'" routerLink="/dashboard/archivenotes" class="star">
+            <i class="material-icons" style="padding-right: 35px">archive</i>Archive
+          </a>
+        </div>
+        <div class="paddingnote">
+          <a mat-button (click)="headName='Trash'" routerLink="/dashboard/trash" class="star">
+            <i class="material-icons" style="padding-right: 35px"> delete </i> Trash
+          </a>
+        </div>
+        <div class="paddingnote">
+         <label >privacy terms</label>
+        </div>
+        <div class="paddingnote">
+          <label >open souce licenses</label>
+         </div>
+
+      </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <router-outlet>
+      <router-outlet>
 
-        </router-outlet>
+      </router-outlet>
 
     </mat-sidenav-content>
-    </mat-sidenav-container>
-    </div>
+  </mat-sidenav-container>
+</div>

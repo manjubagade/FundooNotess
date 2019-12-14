@@ -1,16 +1,17 @@
 <!-- diaplay notes -->
-<div class="notesDisplay" >
-  <div *ngFor="let note of noteCards |searchbar:search " cdkDrag >
+<div class="notesDisplay">
+  <div *ngFor="let note of noteCards |searchbar:search " cdkDrag>
     <div id="DivForHoverItem">
       <mat-card *ngIf="note.isPin == true" fxLayoutGap="20px" class="cardDisplay"
-        [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }" fxFlexOffset.xs='-10' >
+        [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }"
+        fxFlexOffset.xs='-10'>
         <div>
           <div fxLayout="row" fxLayoutAlign="end start" id="Hidden">
-              <mat-icon class="pin" (click)='unpinnote(note)' matTooltip="UNPINNOTE" >
-                  <img src="../../../assets/pinAfterClick(1).svg" />
-                </mat-icon>
+            <mat-icon class="pin" (click)='unpinnote(note)' matTooltip="UNPINNOTE">
+              <img src="../../../assets/pinAfterClick(1).svg" />
+            </mat-icon>
           </div>
-          
+
           <div (click)="openDialog(note)">
             <div>
               <mat-card-title class="titleinput">{{note.title}}</mat-card-title>
@@ -27,15 +28,15 @@
           </mat-chip-list>
         </div>
         <div *ngFor="let shared of notesCollaborator">
-            <div *ngIf="shared.noteId == note.id">
-              <mat-chip-list>
-                <mat-chip [selectable]="selectable" [removable]="removable">
-                  {{shared.receiverEmail}}
-                  <mat-icon matChipRemove (click)="removeCollaborator(shared.id)">cancel</mat-icon>
-                </mat-chip>
-              </mat-chip-list>
-            </div>
+          <div *ngIf="shared.noteId == note.id">
+            <mat-chip-list>
+              <mat-chip [selectable]="selectable" [removable]="removable">
+                {{shared.receiverEmail}}
+                <mat-icon matChipRemove (click)="removeCollaborator(shared.id)">cancel</mat-icon>
+              </mat-chip>
+            </mat-chip-list>
           </div>
+        </div>
         <div *ngFor="let notelables of notesLabels">
           <div *ngIf="notelables.noteId == note.id">
             <div *ngFor="let labels of allLabels">
@@ -71,18 +72,19 @@
 </div>
 <!-- unpin -->
 <!-- <input type="text" [(ngModel)]="searchText" placeholder="name"> -->
-<div class="notesDisplay" cdkDropList (cdkDropListDropped)="drop($event)" >
+<div class="notesDisplay" cdkDropList (cdkDropListDropped)="drop($event)">
   <div *ngFor="let note of noteCards | searchbar:search " cdkDrag>
     <div id="DivForHoverItem">
       <mat-card *ngIf="note.isPin == false" fxLayoutGap="20px" class="cardDisplay"
-        [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }" fxFlexOffset.xs='-10'>
+        [style.background-color]=note.colorCode [ngClass]="{'cardDisplay':flag==true,'notes':flag==false }"
+        fxFlexOffset.xs='-10'>
         <div>
-          <div fxLayout="row" fxLayoutAlign="end start" id="Hidden" >
-              <mat-icon class="pin" (click)='pinnote(note)' matTooltip="PINNOTE">
-                  <img src="../../../assets/pinBeforeClick.svg" />
-                </mat-icon>
+          <div fxLayout="row" fxLayoutAlign="end start" id="Hidden">
+            <mat-icon class="pin" (click)='pinnote(note)' matTooltip="PINNOTE">
+              <img src="../../../assets/pinBeforeClick.svg" />
+            </mat-icon>
           </div>
-         
+
           <div (click)="openDialog(note)">
             <div>
               <mat-card-title class="titleinput">{{note.title}}</mat-card-title>
@@ -132,7 +134,7 @@
               <button mat-menu-item (click)="Restore(note)">Restore</button>
             </mat-menu>
           </div>
-          <div *ngIf='cond!="trash"' id="Hidden" >
+          <div *ngIf='cond!="trash"' id="Hidden">
             <app-iconlist (update)='updateCome($event)' [card]='note' [type]='type'></app-iconlist>
           </div>
         </div>

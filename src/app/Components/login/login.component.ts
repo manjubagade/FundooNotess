@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AppService } from 'src/app/services/UserServices/app.service';
 import * as jwt_decode from "jwt-decode";
 import { AuthService, FacebookLoginProvider, GoogleLoginProvider, LinkedinLoginProvider } from 'angular-6-social-login';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   token: string;
   payLoad: any;
 
-  constructor(private service: AppService, private router: Router, private socialAuthService: AuthService) { }
+  constructor(private service: AppService, private router: Router, private socialAuthService: AuthService,private snackbar:MatSnackBar) { }
   email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('', [Validators.required]);
 
@@ -41,7 +42,8 @@ export class LoginComponent implements OnInit {
       console.log(this.payLoad.UserID);
 
       localStorage.setItem('UserId', this.payLoad.UserID);
-      alert("welcome to dashboard");
+     // alert("welcome to dashboard");
+     this.snackbar.open("Login SuccessFully","Ok",{duration:3000,verticalPosition:'top'});
       this.router.navigate(['dashboard']);
 
     }, err => {

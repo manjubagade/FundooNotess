@@ -94,7 +94,7 @@ this.data.changeMessage(this.value)
   openDialog(): void {
     const dialogConfig = new MatDialogConfig();
     let dialogRef = this.dialog.open(LabelsDialogComponent, {
-      width: '250px',
+      width: '300px',
       data: this.notesLabel
 
     });
@@ -131,6 +131,7 @@ this.data.changeMessage(this.value)
   refresh() {
     window.location.reload();
     this.spinner.show();
+    
   }
 
 

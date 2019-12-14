@@ -53,6 +53,8 @@ export class DisplaynotesComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.noteCards);
+
     this.token = localStorage.getItem('token')
     this.payLoad = jwt_decode(this.token)
      this.data.currentMessages.subscribe(data => {
@@ -60,7 +62,7 @@ export class DisplaynotesComponent implements OnInit {
       this.css = data ? 'row wrap' : 'column'
        
      this.flag=data;
-
+      
     });
     // this.getallnotes();
   }
