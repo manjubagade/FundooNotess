@@ -37,6 +37,7 @@
             </mat-chip-list>
           </div>
         </div>
+        
         <div *ngFor="let notelables of notesLabels">
           <div *ngIf="notelables.noteId == note.id">
             <div *ngFor="let labels of allLabels">
@@ -110,6 +111,11 @@
             </mat-chip-list>
           </div>
         </div>
+        <!-- <div *ngFor="let shared of notesCollaborator" >
+          <div *ngIf="shared.noteId == note.id" fxLayout="row wrap" fxLayoutGap="5px">
+            <button mat-mini-fab>{{shared.receiverEmail[0].toUpperCase()}}</button>
+          </div>
+        </div> -->
         <div *ngFor="let notelables of notesLabels">
           <div *ngIf="notelables.noteId == note.id">
             <div *ngFor="let labels of allLabels">

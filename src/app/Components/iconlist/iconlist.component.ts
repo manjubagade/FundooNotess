@@ -3,6 +3,7 @@ import { MatCard, MatDialogConfig, MatDialog } from '@angular/material';
 import { NotesService } from 'src/app/services/NotesServices/notes.service';
 import { EventEmitter } from '@angular/core';
 import { CollaboratordialogComponent } from 'src/app/collaboratordialog/collaboratordialog.component';
+import { AppService } from 'src/app/services/UserServices/app.service';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class IconlistComponent implements OnInit {
   userId:any;
   email:any;
   userid:any;
-  constructor(private notes:NotesService,private dialog: MatDialog) { 
+  selectedFile:File;
+  constructor(private notes:NotesService,private dialog: MatDialog, private user: AppService) { 
     this.userId = localStorage.getItem('UserId')
     this.notes.getlabels(this.userId).subscribe(responselabels => {
       this.notesLabel = responselabels;
@@ -100,6 +102,22 @@ export class IconlistComponent implements OnInit {
     },err =>{
       console.log(err);
     })
+  }
+  onFileChanged(event) {
+    debugger;
+    console.log(event);
+    this.selectedFile = event.target.files[0];
+    console.log(this.selectedFile,"gjghj");
+    let uploadData = new FormData();
+    uploadData.append('files',this.selectedFile,'files');
+    console.log(uploadData,"dfsd");
+    this.user.profilepic(uploadData,this.email).subscribe((data:any) => {
+      console.log(data);
+      localStorage.setItem('imgUrl',data);
+    },err =>{
+      console.log(err);
+    }
+    );
   }
 
   LabelList(label)

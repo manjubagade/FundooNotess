@@ -18,8 +18,8 @@
     <mat-icon class="mat-18" matTooltip="Change color">color_lens</mat-icon>
   </button>
 
-  <button style="outline: none" mat-icon-button (click)="selectFile.click(file)">
-     <input style="display: none" type="file" #selectFile (change)="uploadFile(file.files)">
+  <button style="outline: none" mat-icon-button (click)="selectFile.click()">
+     <input style="display: none" type="file" #selectFile (change)="uploadFile()">
     <mat-icon class="mat-18" matTooltip="Add Image">photo</mat-icon>
   </button>
 

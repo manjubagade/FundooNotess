@@ -23,7 +23,7 @@ export class NotesService {
    { params:{
     userId:userId
   } });
-}
+} 
 
 deleteNote(result){
   return this.http.delete(this.link + '/Delete',
