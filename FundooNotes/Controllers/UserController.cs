@@ -230,7 +230,7 @@ namespace FundooNotes.Controllers
                     return false;
                 }
                 //// MailMessage class is present is System.Net.Mail namespace
-                MailMessage mailMessage = new MailMessage("themanju.bagade@gmail.com", model.Email);
+                MailMessage mailMessage = new MailMessage("manjubagade0@gmail.com", model.Email);
                 Guid guid = Guid.NewGuid();
                 //// StringBuilder class is present in System.Text namespace
                 StringBuilder sbEmailBody = new StringBuilder();
@@ -239,7 +239,7 @@ namespace FundooNotes.Controllers
                 sbEmailBody.Append("<br/>");
                 sbEmailBody.Append("http://localhost:4200/resetpassword?uid=" + guid.ToString());
                 sbEmailBody.Append("<br/><br/>");
-                sbEmailBody.Append("<b>BridgeIt</b>");
+                sbEmailBody.Append("<b>Bridge</b>");
 
                 mailMessage.IsBodyHtml = true;
 
@@ -249,8 +249,8 @@ namespace FundooNotes.Controllers
 
                 smtpClient.Credentials = new System.Net.NetworkCredential()
                 {
-                    UserName = "manju@gmail.com",
-                    Password = "123456"
+                    UserName = "manjubagade0@gmail.com",
+                    Password = "manju123"
                 };
 
                 smtpClient.EnableSsl = true;
@@ -293,7 +293,7 @@ namespace FundooNotes.Controllers
                 }
                 var stream = files.OpenReadStream();
                 var name = files.FileName;
-                CloudinaryDotNet.Account account = new CloudinaryDotNet.Account("dekmrle72", "699555858957497", "LJIgvOlD9bDG5XvT9fLkIco_sZg");
+                CloudinaryDotNet.Account account = new CloudinaryDotNet.Account("dgx99gunc", "158164898159628", "MqGHJN_5_5u9mSyq6t_O_x-39xs");
 
                 CloudinaryDotNet.Cloudinary cloudinary = new CloudinaryDotNet.Cloudinary(account);
                 var uploadParams = new ImageUploadParams()

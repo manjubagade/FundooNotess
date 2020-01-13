@@ -146,7 +146,7 @@ namespace FundooNotes
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/V1/swagger.json", "FundooNotesApp V1");
+                c.SwaggerEndpoint("/swagger/V1/swagger.json", "manjunath");
             });
         }
     }

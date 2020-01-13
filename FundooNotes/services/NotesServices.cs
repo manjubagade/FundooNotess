@@ -430,6 +430,7 @@ namespace FundooNotes.services
 
         public int updateCollaborator(SharedNotes sharedNotes, int id)
         {
+
             try
             {
                 NotesModel tableModel = this.context.Notes.Where<NotesModel>(t => t.Id == id).FirstOrDefault();
